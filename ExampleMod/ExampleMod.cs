@@ -1,8 +1,6 @@
 using Beebo;
 using Beebo.GameContent.Components;
 
-// Namespace should always match the Mod class's name, even though it is technically completely optional, it's nice
-// for other modders to be able to easily work with, in case they want to use your mod as a dependency
 namespace ExampleMod;
 
 // Mod dependencies have 3 kinds: Required, Optional, and Incompatible
@@ -12,7 +10,7 @@ namespace ExampleMod;
 [ModDependency("coremods", ModDependency.DependencyKind.Required, "^1.0")]
 // (note: coremods is builtin so it will always be loaded anyway. this is just an example)
 
-// You MUST add the ModInfo attribute to your mod class, else the entire mod fails to load
+// You MUST add the ModInfo attribute to your mod class, or else the entire mod fails to load
 [ModInfo(MOD_GUID, MOD_NAME, MOD_VERSION)]
 public class ExampleMod : Mod
 {
